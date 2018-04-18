@@ -1,2 +1,7 @@
 <p>{{diary.entry}}</p>
-
+<!-- <form (ngSubmit)='submitEntry()' #toDoForm = 'ngForm'>
+  <label for="todo">To Do</label>
+  <textarea name="todo" id="todo" cols="30" rows="10" [(ngModel)]="newToDo" #todo='ngModel'></textarea>
+  <button type="submit"></button>
+</form> -->
+<button class="btn btn-danger" (click)='deleteEntry(true)'>Delete an Entry</button>

@@ -10,10 +10,9 @@
       <h2>Diary Entries</h2>
       <ol>
         <div *ngFor="let entry of diaries; let i = index">
-          <li id="{{i}}">{{entry.entryDate}}</li>
+          <li id="{{i}}">{{entry.entryDate|date}}</li>
           <button class="btn btn-info" (click)='toggleDetails(i)'>Toggle Details</button>
-          <app-diary-details *ngIf="entry.showEntry" [diary]='entry'></app-diary-details>
-          <button class="btn btn-danger" (click)='deleteEntry(true)'>Delete an Entry</button>
+          <app-diary-details *ngIf="entry.showEntry" [diary]='entry' (isComplete)='deleteEntry($event,i)'></app-diary-details>
         </div>
       </ol>
     </div>
