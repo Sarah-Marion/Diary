@@ -17,7 +17,21 @@ export class DiaryComponent implements OnInit {
     new Diary(6, new Date(2018, 3, 14) ),
     new Diary(7, new Date(2018, 3, 14) ), 
   ]
+  deleteEntry(isComplete, index){
+    if (isComplete){
+      let toDelete=confirm(`Are you sure you want to delete this Entry?`)
+      if (toDelete){
+        this.diaries.splice(index, 1);
+      }
+    }
+  }
 
+  addNewEntry(diary){
+    let entryLength= this.diaries.length;
+    diary.id=entryLength+1;
+    diary.entryDate=new Date(diary.entryDate);
+    this.diaries.push(diary);
+  }
   constructor() { }
 
   ngOnInit() {

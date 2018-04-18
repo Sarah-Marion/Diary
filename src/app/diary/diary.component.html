@@ -4,10 +4,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+      <app-diary-form (addEntry)='addNewEntry($event)'></app-diary-form>
+    </div>
+    <div class="col-md-6">
       <h2>Diary Entries</h2>
       <ol>
-        <li *ngFor="let entry of diaries">{{ entry.entryDate }}</li>
+        <div *ngFor="let entry of diaries; let i = index">
+          <li id="{{i}}">{{ entry.entryDate }}</li>
+          <button class="btn btn-danger" (click)='deleteEntry(true)'>Delete an Entry</button>
+        </div>
       </ol>
     </div>
+
   </div>
 </div>
