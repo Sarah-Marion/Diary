@@ -1,5 +1,5 @@
 export class Diary {
-    constructor (public id:number, public completeDate:Date){
+    constructor (public id:number, public entryDate:Date){
         
     }
 
