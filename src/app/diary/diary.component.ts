@@ -9,7 +9,7 @@ import {Diary} from '../diary'
 export class DiaryComponent implements OnInit {
   
   diaries =  [
-    new Diary(1, new Date(2018, 3, 14) ),
+    new Diary(1, new Date(2018,3,14) ),
     new Diary(2, new Date(2018, 3, 14) ),
     new Diary(3, new Date(2018, 3, 14) ),
     new Diary(4, new Date(2018, 3, 14) ),
@@ -21,7 +21,7 @@ export class DiaryComponent implements OnInit {
     if (isComplete){
       let toDelete=confirm(`Are you sure you want to delete this Entry?`)
       if (toDelete){
-        this.diaries.splice(index, 1);
+        this.diaries.splice(index,1)
       }
     }
   }

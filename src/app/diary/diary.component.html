@@ -11,6 +11,7 @@
       <ol>
         <div *ngFor="let entry of diaries; let i = index">
           <li id="{{i}}">{{entry.entryDate}}</li>
+          <!-- <button class="btn btn-info" (click)='toggleDetails(i)'>Toggle Details</button> -->
           <button class="btn btn-danger" (click)='deleteEntry(true)'>Delete an Entry</button>
         </div>
       </ol>
@@ -18,3 +19,4 @@
 
   </div>
 </div>
+<!-- <p *ngIf="entries.length > 4">You have tons to Do!</p> -->
