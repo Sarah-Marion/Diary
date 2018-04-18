@@ -1,6 +1,7 @@
 export class Diary {
-    constructor (public id:number, public entryDate:Date){
-        
+    public showEntry: boolean;
+    constructor (public id:number, public entryDate:Date, public entry:string){
+        this.showEntry=false;
     }
 
 }
