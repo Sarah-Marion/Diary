@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { DiaryDetailsComponent } from './diary-details/diary-details.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 
@@ -15,7 +16,8 @@ import { DiaryDetailsComponent } from './diary-details/diary-details.component';
     AppComponent,
     DiaryComponent,
     DiaryFormComponent,
-    DiaryDetailsComponent
+    DiaryDetailsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
