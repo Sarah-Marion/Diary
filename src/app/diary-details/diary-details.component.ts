@@ -11,10 +11,10 @@ export class DiaryDetailsComponent implements OnInit {
   @Input() textEntry: textEntry;
  
   @Output() isComplete = new EventEmitter<boolean>();
-  // @Output() addTextEntry = new EventEmitter<textEntry>();
+  
 
   textEntries = [new textEntry(1, "The 2nd ToDo")]
-  // newTextEntries = new textEntry(0,"");
+  
   
   addTextEntries(entry){
     let lengthEntry = this.textEntries.length;
@@ -22,10 +22,6 @@ export class DiaryDetailsComponent implements OnInit {
     this.textEntries.push(entry);
 
   }
-
-  // submitText(){
-  // this.addTextEntry.emit(this.  TextEntries);
-  // }
 
   deleteEntry(complete:boolean){
     this.isComplete.emit(complete);

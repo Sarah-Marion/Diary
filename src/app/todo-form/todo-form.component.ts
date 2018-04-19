@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { textEntry } from '../diary';
 
 @Component({
   selector: 'app-todo-form',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-form.component.css']
 })
 export class TodoFormComponent implements OnInit {
+
+  newTextEntries = new textEntry(0,"");
+  @Output() addTextEntry = new EventEmitter<textEntry>();
+
+   submitText(){
+  this.addTextEntry.emit(this.newTextEntries);
+  }
 
   constructor() { }
 

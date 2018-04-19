@@ -1,3 +1,8 @@
-<p>
-  todo-form works!
-</p>
+<form (ngSubmit)='submitText()' #toDoForm='ngForm'>
+  <div class="form-group">
+    <label for="todo">To Do</label>
+    <textarea name="newText" class="form-control" id="toDo" cols="7" rows="5" [(ngModel)]="newTextEntries.newText" #newText="ngModel"></textarea>
+    <br> Display {{newTextEntries.newText}}
+  </div>
+  <button type="submit" class="btn btn-primary">Add To Do</button>
+</form>
