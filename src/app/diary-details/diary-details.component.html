@@ -1,7 +1,30 @@
 <p>{{diary.entry}}</p>
+<ol>
+  <div *ngFor='let new of textEntries;let i =index' >
+    <li id="{{i}}">{{new.newText}}</li>
+
+  </div>
+</ol>
 <!-- <form (ngSubmit)='submitEntry()' #toDoForm = 'ngForm'>
   <label for="todo">To Do</label>
   <textarea name="todo" id="todo" cols="30" rows="10" [(ngModel)]="newToDo" #todo='ngModel'></textarea>
   <button type="submit"></button>
 </form> -->
+<div class="container-fluid">
+  <!-- <ol>
+    <li (addTextEntry)='addTextEntries($event)'></li>
+  </ol> -->
+  <div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)='submitText()' #toDoForm='ngForm'>
+        <div class="form-group">
+          <label for="todo">To Do</label>
+          <textarea name="newText" class="form-control" id="toDo" cols="7" rows="5" [(ngModel)]="textEntries.newText" #newText="ngModel"></textarea>
+          <br> Display {{textEntries.newText}}
+        </div>
+        <button type="submit" class="btn btn-primary">Add To Do</button>
+      </form>
+    </div>
+  </div>
+</div>
 <button class="btn btn-danger" (click)='deleteEntry(true)'>Delete an Entry</button>

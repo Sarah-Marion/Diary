@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Diary } from '../diary';
+import { Diary, textEntry } from '../diary';
 
 @Component({
   selector: 'app-diary-details',
@@ -8,19 +8,23 @@ import { Diary } from '../diary';
 })
 export class DiaryDetailsComponent implements OnInit {
   @Input() diary:Diary;
+  @Input() textEntry: textEntry;
+ 
   @Output() isComplete = new EventEmitter<boolean>();
+  // @Output() addTextEntry = new EventEmitter<textEntry>();
 
-  // remove this if fails
-  // newToDo = [""];
-  // @Output() addToDo= new EventEmitter<Diary>();
-  // addNew(toDo){
-  //   // let entryLength= this.toDo.length;
-  //   // toDo.id=entryLength+1;
-  //   toDo.entry= "";
-  //   this.newToDo.push(toDo);
-  // }
-  // submitEntry(){
-  //   this.addToDo.emit(this.newToDo);
+  textEntries = [new textEntry(1, "The 2nd ToDo")]
+  // newTextEntries = new textEntry(0,"");
+  
+  addTextEntries(entry){
+    let lengthEntry = this.textEntries.length;
+    entry.count = lengthEntry + 1;
+    this.textEntries.push(entry);
+
+  }
+
+  // submitText(){
+  // this.addTextEntry.emit(this.  TextEntries);
   // }
 
   deleteEntry(complete:boolean){

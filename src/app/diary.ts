@@ -5,3 +5,9 @@ export class Diary {
     }
 
 }
+
+export class textEntry {
+    constructor (public count: number, public newText: string){
+        
+    }
+}
