@@ -8,6 +8,7 @@ import { DiaryComponent } from './diary/diary.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { DiaryDetailsComponent } from './diary-details/diary-details.component';
 import { HighlightDirective } from './highlight.directive';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 
 
@@ -17,7 +18,8 @@ import { HighlightDirective } from './highlight.directive';
     DiaryComponent,
     DiaryFormComponent,
     DiaryDetailsComponent,
-    HighlightDirective
+    HighlightDirective,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,
