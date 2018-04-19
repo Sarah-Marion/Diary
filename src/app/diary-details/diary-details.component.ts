@@ -26,6 +26,7 @@ export class DiaryDetailsComponent implements OnInit {
   deleteEntry(complete:boolean){
     this.isComplete.emit(complete);
   }
+  
   constructor() { }
 
   ngOnInit() {
